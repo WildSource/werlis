@@ -19,6 +19,6 @@ main :: IO ()
 main = do
     args <- getArgs
     path <- readFile $ head args
-    if args == []
+    if null args
     then print "Execute prompt"
     else print $ tokenize path 

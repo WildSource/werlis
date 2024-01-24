@@ -18,7 +18,7 @@ import Lexer.Tokenizer
 main :: IO ()
 main = do
     args <- getArgs
-    tokenize readFile $ head args
+    path <- readFile $ head args
     if args == []
     then print "Execute prompt"
-    else print "Execute File" 
+    else print $ tokenize path 
